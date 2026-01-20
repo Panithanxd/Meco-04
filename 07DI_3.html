@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,8 +8,9 @@
     />
     <link rel="icon" href="boy1.png" />
     <link rel="shortcut icon" href="boy1.png" />
- <title>MECO-02</title>
-    <meta name="description" content="MECO-02" />
+
+    <title>STL-07</title>
+    <meta name="description" content="STL-07" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -17,7 +18,7 @@
 
     <style>
       body {
-        padding-top: 50px; /* กัน top-bar */
+        padding-top: 80px; /* กัน top-bar */
       }
 
       .Name {
@@ -26,7 +27,7 @@
         font-weight: bold;
         margin: 20px auto;
         text-align: center;
-        background-color: #61ff39;
+        background-color: #f6fa00;
         border: 2px solid black;
         padding: 10px 20px;
         border-radius: 10px;
@@ -39,7 +40,7 @@
         cursor: pointer;
         border-radius: 10px;
         border: 2px solid black;
-        background-color: #61ff39;
+        background-color: #f6fa00;
       }
       .w1:hover {
         background: #ddd;
@@ -108,7 +109,6 @@
         align-items: flex-end; /* ฐาน module เสมอกัน */
         justify-content: center;
         margin-left: -80px;
-        margin-top: -80px;
       }
 
       .module {
@@ -152,7 +152,6 @@
         z-index: 100000;
       }
 
-      
       /* กล่องอุปกรณ์ */
       .module {
         position: relative;
@@ -181,7 +180,7 @@
         background: #fff;
       }
       .tank-area {
-        margin-top: 60px;
+        margin-top: 40px;
         display: flex;
         justify-content: center;
         gap: 80px;
@@ -235,7 +234,7 @@
         height: 100px;
         border: 2px solid #000;
         border-radius: 8px;
-        margin-bottom: 0px;
+        margin-bottom: 50px;
 
         display: flex;
         justify-content: center;
@@ -248,7 +247,7 @@
       /* ตัวหนังสือบน diode */
       .diode-label {
         position: absolute;
-        top: -30px; /* ลอยเหนือกรอบ */
+        top: -18px; /* ลอยเหนือกรอบ */
         left: 50%;
         transform: translateX(-50%);
         font-size: 20px;
@@ -431,7 +430,7 @@
       .Tank1 {
         position: relative; /* parent สำหรับ absolute children */
         height: 100px;
-        width: 300px;
+        width: 370px;
         background: #83aae5;
         border: 5px solid #525252;
         padding: 6px;
@@ -522,10 +521,11 @@
       .Tank2 {
         position: relative; /* parent สำหรับ absolute children */
         height: 100px;
-        width: 450px;
+        width: 370px;
         background: #83aae5;
         border: 5px solid #525252;
         padding: 6px;
+        top: 200px;
 
         display: flex;
         flex-direction: column;
@@ -668,8 +668,8 @@
       /* ===== กลุ่มปั๊ม ===== */
       .pump-group {
         position: absolute;
-        top: -80px;
-        left: 60%;
+        top: -90px;
+        left: 70%;
         transform: translateX(-50%);
         display: flex;
         gap: 50px;
@@ -684,9 +684,9 @@
       .pump:hover svg {
         transform: scale(1.1);
         transition: 0.5s;
+        border: #00ff22 10px solid;
         background-color: #00ff22;
         border-radius: 50%;
-        border: #00ff22 10px solid;
       }
 
       .pump-on-tank .pump-tag {
@@ -703,6 +703,30 @@
         font-size: 15px;
         font-weight: bold;
         margin-top: 2px;
+      }
+      .pump-icon {
+        position: relative;
+        width: 50px;
+        height: 50px;
+      }
+
+      .pump-icon svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .pump-img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+      .pump:hover .pump-img {
+        transform: translate(-50%, -50%) scale(1.1);
+        transition: 0.5s;
       }
       /* ตัวอ้างอิง */
       .btn-wrap {
@@ -827,30 +851,6 @@
         resize: both; /* 🔥 ดึงได้ทั้งกว้าง + สูง (ทแยงได้) */
         overflow: auto; /* 🔥 จำเป็นมาก ไม่งั้น resize จะไม่ทำงาน */
       }
-      .pump-icon {
-        position: relative;
-        width: 50px;
-        height: 50px;
-      }
-
-      .pump-icon svg {
-        width: 100%;
-        height: 100%;
-      }
-
-      .pump-img {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        width: 50px;
-        height: 50px;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-      }
-      .pump:hover .pump-img {
-        transform: translate(-50%, -50%) scale(1.1);
-        transition: 0.5s;
-      }
       .icon {
         width: 40px;
         height: 40px;
@@ -868,7 +868,7 @@
         justify-content: center;
         border-radius: 12px;
         border: 2px solid black;
-        background-color: #61ff39;
+        background-color: #f6fa00;
         cursor: pointer;
       }
       .w3 {
@@ -884,28 +884,28 @@
 
         border-radius: 12px;
         border: 2px solid black;
-        background-color: #06d9f5;
+        background-color: #f6fa00;
         cursor: pointer;
       }
     </style>
   </head>
 
   <body>
-    <div class="Name">Plating</div>
+    <div class="Name">DI RINSE-3</div>
     <div class="top-bar">
-      <button class="w1" onclick="window.location.href='Main.html'">
+      <button class="w1" onclick="window.location.href = 'Main.html'">
         🏘️ All Machin
       </button>
-      <button class="w1" onclick="window.location.href='MECO-02.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-02.html'">
         🗽MECO-02
       </button>
-      <button class="w1" onclick="window.location.href='MECO-04.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-04.html'">
         🏭MECO-04
       </button>
-      <button class="w1" onclick="window.location.href='STL-05.html'">
+      <button class="w1" onclick="window.location.href = 'STL-05.html'">
         🏗️STL-05
       </button>
-      <button class="w1" onclick="window.location.href='STL-07.html'">
+      <button class="w1" onclick="window.location.href = 'STL-07.html'">
         🗼STL-07
       </button>
     </div>
@@ -927,15 +927,17 @@
     <!-- ปุ่มฝั่งซ้าย -->
     <!-- แถวควบคุม -->
     <div class="nav-left">
-      <button class="w3" onclick="window.location.href='02Predip.html'"><img
+      <button class="w3" onclick="window.location.href = '07CH_D.html'">
+        <img
           src="back-button-circular-left-arrow-symbol_icon-icons.com_74326.png"
           class="icon"
         />
-        <span class="btn-text">BACK</span></button>
+        <span class="btn-text">BACK</span>
+      </button>
     </div>
 
     <div class="nav-right">
-      <button class="w3" onclick="window.location.href='02DWR.html'">
+      <button class="w3" onclick="window.location.href = '07CH_E.html'">
         <img src="next6_89384.png" class="icon" w3-wrap />
         <span class="btn-text">NEXT</span>
       </button>
@@ -943,294 +945,39 @@
 
     <!-- ปุ่ม TOP แยก -->
     <div class="front-bar">
-      <button class="w2" onclick="window.location.href='MECO-02.html'">
+      <button class="w2" onclick="window.location.href = 'STL-07.html'">
         🏠
       </button>
     </div>
 
-    <div class="page-center main-content">
-      <div class="hmi-area">
-        <div class="cell-group"></div>
-        <div class="module-wrap gray">
-          <div class="diode-box">
-            <div class="diode-label">6R5</div>
-            <div class="diode yellow"></div>
-          </div>
+    <div class="module-footer"></div>
 
-          <div class="module">
-            <div class="module-footer">
-              <div class="btn-wrap">
-                <button class="PDL green" onclick="openHistory('26PDL5')">
-                  6PDL5
-                </button>
-                <div class="specBox">
-                  Spec & History
-                  <br />
-                  Level 6-5
-                </div>
-              </div>
-              <div class="btn-wrap"></div>
-         
-            </div>
-          </div>
-          <div class="LFD-OUT1 btn-wrap">
-            <button class="LFD-OUT gray" onclick="openHistory('6LFD5')">
-              6LFD5
-            </button>
+    <div class="tank-area">
+      <div class="Tank2 gray">
+        <!-- ปั๊มบน Tank -->
+        <div class="pump-group">
+          <button class="pump btn-wrap" onclick="openHistory('5P3')">
+            <svg viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="#ddd"
+                stroke="black"
+                stroke-width="4"
+              />
+            </svg>
+            <img src="Screenshot 2026-01-16 075433.png" class="pump-img" />
+            <div class="pump-tag">5P3</div>
+
             <div class="specBox">
-              Spec & History<br />
-              LFD 6-5
+              Spec & History
+              <br />
+              Pump 5P3
             </div>
-          </div>
-          <div class="LFD-OUT2 btn-wrap">
-            <button class="LFD-FRONT gray" onclick="openHistory('6LFD5')">
-              6LFD5
-            </button>
-            <div class="specBox">
-              Spec & History<br />
-              LFD 6-5
-            </div>
-          </div>
+          </button>
         </div>
 
-        <div class="module-wrap gray">
-          <div class="diode-box">
-            <div class="diode-label">6R4</div>
-            <div class="diode yellow"></div>
-          </div>
-          <div class="module">
-            <div class="module-title"></div>
-
-            <div class="module-footer">
-              <div class="btn-wrap">
-                <button class="PDL green" onclick="openHistory('6PDL4')">
-                  6PDL4
-                </button>
-                <div class="specBox">
-                  Spec & History
-                  <br />
-                  Level 6-4
-                </div>
-              </div>
-            
-            </div>
-            <div class="LFD-OUT1 btn-wrap">
-              <button class="LFD-OUT gray" onclick="openHistory('6LFD3')">
-                6LFD3
-              </button>
-
-              <div class="specBox">
-                Spec & History<br />
-              LFD 6-3
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module-wrap gray">
-          <div class="diode-box">
-            <div class="diode-label">6R3</div>
-            <div class="diode yellow"></div>
-          </div>
-          <div class="module">
-            <div class="module-title"></div>
-
-            <div class="module-footer">
-              <div class="btn-wrap">
-                <button class="PDL green" onclick="openHistory('6PDL3')">
-                  6PDL3
-                </button>
-                <div class="specBox">
-                  Spec & History
-                  <br />
-                  Level 6-3
-                </div>
-              </div>
-
-           
-            </div>
-
-            <div class="LFD-OUT1 btn-wrap">
-              <button class="LFD-OUT gray" onclick="openHistory('6LFD2')">
-                6LFD2
-              </button>
-              <div class="specBox">
-                Spec & History<br />
-                LFD 6-2
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module-wrap gray">
-          <div class="diode-box">
-            <div class="diode-label">6R2</div>
-            <div class="diode yellow"></div>
-          </div>
-          <div class="module">
-            <div class="module-title"></div>
-
-            <div class="module-footer">
-              <div class="btn-wrap">
-                <button class="PDL green" onclick="openHistory('6PDL2')">
-                  6PDL2
-                </button>
-                <div class="specBox">
-                  Spec & History
-                  <br />
-                  Level 6-2
-                </div>
-              </div>
-
-            </div>
-            <div class="LFD-OUT1 btn-wrap" onclick="openHistory('6LFD1')">
-              <button class="LFD-OUT gray">6LFD1</button>
-              <div class="specBox">
-                Spec & History<br />
-                LFD 6-1
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module-wrap gray">
-          <div class="diode-box">
-            <div class="diode-label">6R1</div>
-            <div class="diode yellow"></div>
-          </div>
-          <div class="module">
-            <div class="module-title"></div>
-
-            <div class="module-footer">
-              <div class="btn-wrap">
-                <button class="PDL green" onclick="openHistory('6PDL1')">
-                  6PDL1
-                </button>
-                <div class="specBox">
-                  Spec & History
-                  <br />
-                  Level 6-1
-                </div>
-              </div>
-
-             
-            </div>
-            <div class="LFD-OUT1 btn-wrap" onclick="openHistory('6LFD1')"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tank-area">
-        <div class="Tank2 gray">
-          <!-- ปั๊มบน Tank -->
-          <div class="pump-group">
-            <button class="pump btn-wrap" onclick="openHistory('6P5')">
-              <svg viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="#ddd"
-                  stroke="black"
-                  stroke-width="4"
-                />
-              </svg>
-              <img src="Screenshot 2026-01-16 075433.png" class="pump-img" />
-              <div class="pump-tag">6P5</div>
-
-              <div class="specBox">
-                Spec & History
-                <br />
-                Pump 6P5
-              </div>
-            </button>
-            <button class="pump btn-wrap" onclick="openHistory('6P4')">
-              <svg viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="#ddd"
-                  stroke="black"
-                  stroke-width="4"
-                />
-              </svg>
-              <img src="Screenshot 2026-01-16 075433.png" class="pump-img" />
-
-              <div class="pump-tag">6P4</div>
-              <div class="specBox">
-                Spec & History
-                <br />
-                Pump 6P4
-              </div>
-            </button>
-
-            <button class="pump btn-wrap" onclick="openHistory('6P3')">
-              <svg viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="#ddd"
-                  stroke="black"
-                  stroke-width="4"
-                />
-              </svg>
-              <img src="Screenshot 2026-01-16 075433.png" class="pump-img" />
-              <div class="pump-tag">6P3</div>
-              <div class="specBox">
-                Spec & History
-                <br />
-                Pump 6P3
-              </div>
-            </button>
-          </div>
-
-          <button class="Tank2-header">Tank Plating 2(6-3/4/5)</button>
-        </div>
-
-        <div class="Tank1 gray">
-          <div class="Tank1-header">Tank Plating 1(6-1/6-2)</div>
-          <div class="pump-group">
-            <button class="pump btn-wrap" onclick="openHistory('6P2')">
-              <svg viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="#ddd"
-                  stroke="black"
-                  stroke-width="4"
-                />
-              </svg>
-              <img src="Screenshot 2026-01-16 075433.png" class="pump-img" />
-              <div class="pump-tag">6P2</div>
-              <div class="specBox">
-                Spec & History
-                <br />
-                Pump 6P2
-              </div>
-            </button>
-
-            <button class="pump btn-wrap" onclick="openHistory('6P1')">
-              <svg viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="#ddd"
-                  stroke="black"
-                  stroke-width="4"
-                />
-              </svg>
-              <img src="Screenshot 2026-01-16 075433.png" class="pump-img" />
-
-              <div class="pump-tag">6P1</div>
-              <div class="specBox">
-                Spec & History
-                <br />
-                Pump 6P1
-              </div>
-            </button>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1250,10 +997,10 @@
 
         <div class="recent-box">
           <b>Recent History</b>
-          <div id="recentHistory"
-          style="color: #ffffff;background-color: #f84949;">
-
-          </div>
+          <div
+            id="recentHistory"
+            style="color: #ffffff; background-color: #f84949"
+          ></div>
         </div>
 
         <hr />
@@ -1271,7 +1018,7 @@
 
         <div class="modal-actions">
           <button onclick="saveLog()">💾 Save</button>
-          <button onclick="openFullHistory()">📁 Full History</button>
+          <button onclick="openFullHistory()">📜 Full History</button>
           <button onclick="closeModal()">❌ Close</button>
         </div>
       </div>
@@ -1288,8 +1035,8 @@
         <h3 id="fullTitle"></h3>
         <div id="fullHistoryList"></div>
         <button onclick="deleteLast()">↩ Delete Last</button>
-        <button onclick="adminClearHistory()">🚮 Clear History</button>
-        <button onclick="closeFullHistory()">❌ Close</button>
+        <button onclick="adminClearHistory()">🗑 Clear History</button>
+        <button onclick="closeFullHistory()">Close</button>
       </div>
     </div>
     <script>
@@ -1316,35 +1063,25 @@
         "2PDL3": { title: "Level Sensor Log", spec: "PDL Level 2-3" },
         "2PDL4": { title: "Level Sensor Log", spec: "PDL Level 2-4" },
         // Spec Pump
-        "6P1": {
-          title: "Pump History",
-          spec: "Spec: 0.37kW/  Model:D13-12-300-PP/(RPM:2855rpm.)",
+        "5P3": {
+          title: "Pump",
+          spec: "Spec: 0.75kW/ Model:D168-0.75-400PP/(RPM:2834rpm.)",
         },
-        "6P2": {
+        "2P3": {
           title: "Pump History",
-          spec: "Spec: 0.37kW   /  Model:D13-12-300-PP/(RPM:2855rpm.)",
+          spec: "Spec: 0.18kW/ Model:D13-08-300-PP/(RPM:2880rpm.)",
         },
-        "6P3": {
-          title: "Pump History",
-          spec: "Spec: 0.37kW/  Model:D13-12-300-PP/(RPM:2855rpm.)",
-        },
-        "6P4": {
-          title: "Pump History",
-          spec: "Spec: 0.37kW   /  Model:D13-12-300-PP/(RPM:2855rpm.)",
-        },
-        "6P5": {
-          title: "Pump History",
-          spec: "Spec: 0.37kW/  Model:D13-12-300-PP/(RPM:2855rpm.)",
-        },
+        "2P6": { title: "Pump History", spec: "Chemical Pump 2P6" },
+        "2P7": { title: "Pump History", spec: "Chemical Pump 2P7" },
         "2HL1": { title: "Level ", spec: "" },
         // Spec Heater
         "2H1": {
           title: "Heater",
-          spec: "Spec&History Model:3HXOL9310.5-22-R18-P2-1000/9 kW",
+          spec: "Spec: 6Kw / Model:3HXOL6310.5-19-R18",
         },
         "2H2": {
           title: "Heater",
-          spec: "Spec: 9 kW/ Model:3HXOL9310.5-22-R18-P2-1000",
+          spec: "Spec&History  Model:3HXOL9310.5-22-R18-P2-1000/9 kW",
         },
       };
       function resetNoteSize() {
@@ -1431,7 +1168,7 @@
           "Full History : " + currentPart;
 
         const logs = JSON.parse(
-          localStorage.getItem("log_" + currentPart) || "[]"
+          localStorage.getItem("log_" + currentPart) || "[]",
         );
 
         const box = document.getElementById("fullHistoryList");

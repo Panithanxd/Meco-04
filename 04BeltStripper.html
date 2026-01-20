@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,8 +9,8 @@
     <link rel="icon" href="boy1.png" />
     <link rel="shortcut icon" href="boy1.png" />
 
-    <title>Tank-Deflash-1</title>
-    <meta name="description" content="Tank Deflash 1 HMI Monitor" />
+    <title>MECO-04</title>
+    <meta name="description" content="MECO-04" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -893,19 +893,19 @@
   <body>
     <div class="Name">BeltStripper</div>
     <div class="top-bar">
-      <button class="w1" onclick="window.location.href='Main.html'">
+      <button class="w1" onclick="window.location.href = 'Main.html'">
         🏘️ All Machin
       </button>
-      <button class="w1" onclick="window.location.href='MECO-02.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-02.html'">
         🗽MECO-02
       </button>
-      <button class="w1" onclick="window.location.href='MECO-04.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-04.html'">
         🏭MECO-04
       </button>
-      <button class="w1" onclick="window.location.href='STL-05.html'">
+      <button class="w1" onclick="window.location.href = 'STL-05.html'">
         🏗️STL-05
       </button>
-      <button class="w1" onclick="window.location.href='STL-07.html'">
+      <button class="w1" onclick="window.location.href = 'STL-07.html'">
         🗼STL-07
       </button>
     </div>
@@ -927,7 +927,7 @@
     <!-- ปุ่มฝั่งซ้าย -->
     <!-- แถวควบคุม -->
     <div class="nav-left">
-      <button class="w3" onclick="window.location.href='04Dryer.html'">
+      <button class="w3" onclick="window.location.href = '04Dryer.html'">
         <img
           src="back-button-circular-left-arrow-symbol_icon-icons.com_74326.png"
           class="icon"
@@ -937,7 +937,7 @@
     </div>
 
     <div class="nav-right">
-      <button class="w3" onclick="window.location.href='04Dryer13.html'">
+      <button class="w3" onclick="window.location.href = '04Dryer13.html'">
         <img src="next6_89384.png" class="icon" />
         <span class="btn-text">NEXT</span>
       </button>
@@ -945,7 +945,7 @@
 
     <!-- ปุ่ม TOP แยก -->
     <div class="front-bar">
-      <button class="w2" onclick="window.location.href='MECO-04.html'">
+      <button class="w2" onclick="window.location.href = 'MECO-04.html'">
         🏠
       </button>
     </div>
@@ -1195,7 +1195,10 @@
 
         <div class="recent-box">
           <b>Recent History</b>
-          <div id="recentHistory"></div>
+          <div
+            id="recentHistory"
+            style="color: #ffffff; background-color: #f84949"
+          ></div>
         </div>
 
         <hr />
@@ -1369,7 +1372,7 @@
           "Full History : " + currentPart;
 
         const logs = JSON.parse(
-          localStorage.getItem("log_" + currentPart) || "[]"
+          localStorage.getItem("log_" + currentPart) || "[]",
         );
 
         const box = document.getElementById("fullHistoryList");

@@ -1,20 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STL-05</title>
+
+
+</head>
+<!doctype html>
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
-    <link rel="icon" href="boy1.png" />
-    <link rel="shortcut icon" href="boy1.png" />
+    <title>STL-05</title>
 
-    <title>MECO-04</title>
-    <meta name="description" content="Tank Deflash 1 HMI Monitor" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
     <style>
       /* ===== หัวข้อ ===== */
       .title {
@@ -23,7 +21,7 @@
         font-weight: bold;
         margin: 20px auto;
         text-align: center;
-        background-color: #00b3ff;
+        background-color: #8b8b8b;
         border: 2px solid black;
         padding: 10px 20px;
         border-radius: 10px;
@@ -136,8 +134,8 @@
       }
       .turnwheelbig .wheel-img {
         position: absolute;
-        width: 220px; /* 🔥 รูปใหญ่กว่าปุ่ม */
-        height: 220px;
+        width: 290px; /* 🔥 รูปใหญ่กว่าปุ่ม */
+        height: 290px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -223,7 +221,7 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        font-size: 25px;
+        font-size: 40px;
 
         display: flex; /* ✅ จัดกลางจริง */
         align-items: center;
@@ -235,8 +233,8 @@
 
       .turnwheelcenter .wheel-img {
         position: absolute;
-        width: 150px; /* 🔥 รูปใหญ่กว่าปุ่ม */
-        height: 150px;
+        width: 290px; /* 🔥 รูปใหญ่กว่าปุ่ม */
+        height: 290px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -338,7 +336,7 @@
         color: #ddd;
       }
       .gray {
-        background: hsl(191, 81%, 80%);
+        background: hsl(0, 0%, 53%);
         color: #000000;
       }
       .gray1 {
@@ -410,6 +408,7 @@
       } /* ปุ่มกว้าง 90px */
       .w100 {
         width: 100px;
+        height: 60px;
       } /* ปุ่มกว้าง 100px */
       .w110 {
         width: 110px;
@@ -420,15 +419,17 @@
         height: 60px;
       } /* ปุ่มกว้าง 110px */
       .w120 {
-        width: 120px;
+        width: 140px;
+        height: 60px;
       } /* ปุ่มกว้าง 120px */
+
       .w125 {
         width: 125px;
         height: 28px;
       } /* ปุ่มกว้าง 70px */
       .w145 {
-        width: 145px;
-        height: 34px;
+        width: 180px;
+        height: 60px;
       } /* ปุ่มกว้าง 150px */
       .w205 {
         width: 330px;
@@ -573,7 +574,7 @@
         justify-content: center;
         border-radius: 12px;
         border: 2px solid black;
-        background-color: #00b7ff;
+        background-color: #676969;
         cursor: pointer;
       }
       .w2:hover,
@@ -606,320 +607,16 @@
     <button class="w2" onclick="window.location.href = 'Main.html'">
       🏘️All Machine
     </button>
+   
+<body>
+    <div class="front-bar">
+      <button class="w2" onclick="window.location.href = 'STL-05.html'">
+        🏠STL-05
+      </button>
+    </div>
     <div class="title" style="text-align: center; font: 3em sans-serif">
-      MECO-04
+    <div class="Name">COMING SOON</div>
     </div>
-    <div class="page-center">
-      <div class="layout-scale">
-        <div class="layout">
-          <!-- ===== Turn wheel ซ้าย ===== -->
-          <button class="turnwheelbig" style="left: 50px; top: 150px">
-            <img src="T.jpg" class="wheel-img" />
-            <span>Turn<br />wheel</span>
-          </button>
-
-          <!-- ===== แถวบน ===== -->
-          <div class="btn-wrap" style="left: 200px; top: 80px">
-            <button
-              class="btn gray top w80"
-              onclick="window.location.href = '04Predip.html'"
-            >
-              (5-1)<br />Tank Predip
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 290px; top: 80px">
-            <button
-              class="btn gray top w320"
-              onclick="window.location.href = '04Plating.html'"
-            >
-              (6-1) <br />Tank Plating
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 520px; top: 80px">
-            <button class="btn gray top w80">(6-6/7/8)<br />DWR Fresh</button>
-          </div>
-          <div class="btn-wrap" style="left: 610px; top: 80px">
-            <button
-              class="btn gray top w111"
-              onclick="window.location.href = '04Neutralizer.html'"
-            >
-              (7-1)<br />Tank Neutralizer
-            </button>
-          </div>
-
-          <div class="btn-wrap" style="left: 820px; top: 80px">
-            <button class="btn gray top w80">(8-1/2/3)<br />Blow-off</button>
-          </div>
-          <div class="btn-wrap" style="left: 910px; top: 80px">
-            <button
-              class="btn gray top w80"
-              onclick="window.location.href = '04Dryer.html'"
-            >
-              (9-1)<br />Dryer
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 1000px; top: 80px">
-            <button class="btn gray top w112">Un-load</button>
-          </div>
-          <!-- ===== Turn wheel ขวาบน ===== -->
-
-          <button class="turnwheelsmall" style="left: 1180px; top: 100px">
-            <img src="T.jpg" class="wheel-img" />
-            <span>Turn<br />wheel</span>
-          </button>
-
-          <!-- ===== Cell ใต้ Plating ===== -->
-
-          <!-- ===== แถวล่าง ===== -->
-          <div class="btn-wrap" style="left: 200px; top: 400px">
-            <button class="btn gray bottom w80">(4-2)<br />CWR Fresh</button>
-          </div>
-          <div class="btn-wrap" style="left: 290px; top: 400px">
-            <button
-              class="btn gray bottom w80"
-              onclick="window.location.href = '04Activation.html'"
-            >
-              (4-1)<br />Tank Activation
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 380px; top: 400px">
-            <button class="btn gray bottom w80">(3-2)<br />CWR Fresh</button>
-          </div>
-
-          <div class="btn-wrap" style="left: 470px; top: 400px">
-            <button
-              class="btn gray bottom w80"
-              onclick="window.location.href = '04Electro.html'"
-            >
-              (3-1)<br />Tank Electro Clean
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 560px; top: 400px">
-            <button
-              class="btn gray bottom w80"
-              onclick="window.location.href = '04HP.html'"
-            >
-              (2-6)<br />Tank HP
-            </button>
-          </div>
-
-          <div class="btn-wrap" style="left: 650px; top: 400px">
-            <button
-              class="btn gray bottom w80"
-              onclick="window.location.href = '04DOR.html'"
-            >
-              (2-5)<br />Tank DOR
-            </button>
-          </div>
-
-          <div class="btn-wrap" style="left: 740px; top: 400px">
-            <button
-              class="btn gray bottom w260"
-              onclick="window.location.href = '04DEFLASH.html'"
-            >
-              Tank Electro DEFLASH
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 930px; top: 400px">
-            <button class="btn gray bottom w310">In-load</button>
-          </div>
-
-          <!-- =====  deflash===== -->
-
-          <div class="btn-wrap" style="left: 840px; top: 470px">
-            <div class="specBox">
-              Tank Deflash 2<br />
-              1. Heater 2H2 / 9kW <br />
-              2. Pump 2P2 / 1.1kW <br />
-              3. Pump 2P7 / 0.18kW <br />
-            </div>
-          </div>
-
-          <div class="btn-wrap" style="left: 970px; top: 470px">
-            <div class="specBox">
-              Tank Deflash 1<br />
-              1. Heater 2H1 / 9kW <br />
-              2. Pump 2P1 / 1.1kW <br />
-              3. Pump 2P6 / 0.18kW <br />
-            </div>
-          </div>
-
-          <!-- แถวกลางบน -->
-
-          <div class="btn-wrap" style="left: 580px; top: 190px">
-            <button
-              class="btn gray centerupper w300"
-              onclick="window.location.href = '04BeltStripper.html'"
-            >
-              (11-1/2/4/5) <br />Tank Belt Stripper
-            </button>
-          </div>
-          <!-- ===== Cell ใต้แถวกลางบน ===== -->
-
-          <!-- ===== Cell กลางล่าง ===== -->
-          <div class="btn-wrap" style="left: 580px; top: 300px">
-            <button
-              class="btn gray uppercenter w205"
-              onclick="window.location.href = '04BeltStripper.html'"
-            >
-              (11-1/2/4/5) <br />Belt Stripper
-            </button>
-          </div>
-
-          <div class="btn-wrap" style="left: 920px; top: 300px">
-            <button class="btn gray uppercenter w80">
-              (11-7)<br />CWR Fresh
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 1010px; top: 300px">
-            <button class="btn gray uppercenter w80" style="left: 1170px">
-              (12-1/2)<br />Blower
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 1100px; top: 300px">
-            <button class="btn gray uppercenter w80">(13-1)<br />Dryer</button>
-          </div>
-          <!-- ===== Cell แถวกลางล่าง ===== -->
-
-          <!--Turn wheel กลาง-->
-
-          <button class="turnwheelcenter" style="left: 500px; top: 230px">
-            <img src="T.jpg" class="wheel-img" />
-            <span>Turn<br />wheel</span>
-          </button>
-
-          <!-- ===== Turn wheel ขวาล่าง ===== -->
-
-          <button class="turnwheelsmall" style="left: 1180px; top: 330px">
-            <img src="T.jpg" class="wheel-img" />
-            <span>Turn<br />wheel</span>
-          </button>
-
-          <!-- ===== Fresh ===== -->
-          <button class="Fresh red btn-wrap" style="left: 110px; top: 330px">
-            1
-            <div class="specBox">Fresh</div>
-          </button>
-          <button class="Fresh red btn-wrap" style="left: 30px; top: 260px">
-            2
-            <div class="specBox">Fresh</div>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="spec-section">
-      <button class="toggle-btn" data-target="spec1">📒 Stock Heater 👈</button>
-
-      <div id="spec1" class="spec-wrapper">
-        <table class="spec-table">
-          <tr>
-            <!-- หัวตาราง -->
-            <th>Stock Heater</th>
-            <th>Spec</th>
-            <th>Remark</th>
-          </tr>
-
-          <tr>
-            <!-- แถวข้อมูล -->
-            <td>4MEC0313</td>
-            <td>1.5 kW</td>
-            <td>044.833.99027</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0300</td>
-            <td>4.5 kW</td>
-            <td>3HXOL4.5310.5</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0115</td>
-            <td>6 kW</td>
-            <td>3HXOL6310.5-19-R18</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0062</td>
-            <td>9 kW</td>
-            <td>3HXOL9310.5-22-R18-P2-1000</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0072</td>
-            <td>12 kW</td>
-            <td>3HXOL12310.5-22-R18-P2-1000</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="spec-section">
-      <button class="toggle-btn" data-target="spec2">📒 Stock Pump 👈</button>
-
-      <div id="spec2" class="spec-wrapper">
-        <table class="spec-table">
-          <tr>
-            <!-- หัวตาราง -->
-            <th>Stock Pump</th>
-            <th>Spec</th>
-            <th>RPM</th>
-            <th>Remark</th>
-          </tr>
-          <tr>
-            <td>4MEC0151</td>
-            <td>0.18 kW</td>
-            <td>2880 rpm</td>
-            <td>D13-08-300-PP</td>
-          </tr>
-          <tr>
-            <td>4MEC0168</td>
-            <td>0.37 kW</td>
-            <td>2855 rpm</td>
-            <td>D13-12-300-PP</td>
-          </tr>
-          <tr>
-            <td>4MEC0138</td>
-            <td>1.1 kW</td>
-            <td>2900 rpm</td>
-            <td>D18-23-400-PP</td>
-          </tr>
-          <tr>
-            <td>4MEC0454</td>
-            <td>13.5 kW</td>
-            <td>1,450 rpm</td>
-            <td>NP25/41-170RE</td>
-          </tr>
-          <tr>
-            <td>4MEC0754</td>
-            <td>4 kW</td>
-            <td>950 rpm</td>
-            <td>SG132M-6A (Foot/Flange-Mounted B35)</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-
-    <script>
-      function toggleMenu() {
-        document.getElementById("myMenu").classList.toggle("open");
-      }
-    </script>
-
-    <script>
-      document.querySelectorAll(".toggle-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document.getElementById(btn.dataset.target).classList.toggle("open");
-        });
-      });
-    </script>
-
-    <script>
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "/") {
-          e.preventDefault();
-          document.getElementById("searchBox").focus();
-        }
-      });
-    </script>
-  </body>
+    
+</body>
 </html>

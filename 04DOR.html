@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,8 +9,8 @@
     <link rel="icon" href="boy1.png" />
     <link rel="shortcut icon" href="boy1.png" />
 
-    <title>Tank-Deflash-1</title>
-    <meta name="description" content="Tank Deflash 1 HMI Monitor" />
+    <title>MECO-04</title>
+    <meta name="description" content="MECO-04" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -151,8 +151,6 @@
         gap: 12px;
         z-index: 100000;
       }
-
-      
 
       /* กล่องอุปกรณ์ */
       .module {
@@ -725,7 +723,6 @@
         height: 50px;
         transform: translate(-50%, -50%);
         pointer-events: none;
-      
       }
       .pump:hover .pump-img {
         transform: translate(-50%, -50%) scale(1.1);
@@ -862,7 +859,7 @@
         font-size: 14px;
         font-weight: bold;
       }
-       .w2 {
+      .w2 {
         width: 90px;
         height: 90px;
         font-size: 42px;
@@ -894,21 +891,21 @@
   </head>
 
   <body>
-    <div class="Name"> DOR(2-5)</div>
+    <div class="Name">DOR(2-5)</div>
     <div class="top-bar">
-      <button class="w1" onclick="window.location.href='Main.html'">
+      <button class="w1" onclick="window.location.href = 'Main.html'">
         🏘️ All Machin
       </button>
-      <button class="w1" onclick="window.location.href='MECO-02.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-02.html'">
         🗽MECO-02
       </button>
-      <button class="w1" onclick="window.location.href='MECO-04.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-04.html'">
         🏭MECO-04
       </button>
-      <button class="w1" onclick="window.location.href='STL-05.html'">
+      <button class="w1" onclick="window.location.href = 'STL-05.html'">
         🏗️STL-05
       </button>
-      <button class="w1" onclick="window.location.href='STL-07.html'">
+      <button class="w1" onclick="window.location.href = 'STL-07.html'">
         🗼STL-07
       </button>
     </div>
@@ -930,15 +927,17 @@
     <!-- ปุ่มฝั่งซ้าย -->
     <!-- แถวควบคุม -->
     <div class="nav-left">
-      <button class="w3" onclick="window.location.href='04DEFLASH.html'"><img
+      <button class="w3" onclick="window.location.href = '04DEFLASH.html'">
+        <img
           src="back-button-circular-left-arrow-symbol_icon-icons.com_74326.png"
           class="icon"
         />
-        <span class="btn-text">BACK</span></button>
+        <span class="btn-text">BACK</span>
+      </button>
     </div>
 
     <div class="nav-right">
-      <button class="w3" onclick="window.location.href='04HP.html'">
+      <button class="w3" onclick="window.location.href = '04HP.html'">
         <img src="next6_89384.png" class="icon" w3-wrap />
         <span class="btn-text">NEXT</span>
       </button>
@@ -946,7 +945,7 @@
 
     <!-- ปุ่ม TOP แยก -->
     <div class="front-bar">
-      <button class="w2" onclick="window.location.href='MECO-04.html'">
+      <button class="w2" onclick="window.location.href = 'MECO-04.html'">
         🏠
       </button>
     </div>
@@ -967,12 +966,8 @@
                 stroke="black"
                 stroke-width="4"
               />
-              
             </svg>
-            <img
-                  src="Screenshot 2026-01-16 075433.png"
-                  class="pump-img"
-                />
+            <img src="Screenshot 2026-01-16 075433.png" class="pump-img" />
             <div class="pump-tag">2P3</div>
 
             <div class="specBox">
@@ -1003,7 +998,10 @@
 
         <div class="recent-box">
           <b>Recent History</b>
-          <div id="recentHistory"></div>
+          <div
+            id="recentHistory"
+            style="color: #ffffff; background-color: #f84949"
+          ></div>
         </div>
 
         <hr />
@@ -1067,7 +1065,10 @@
         "2PDL4": { title: "Level Sensor Log", spec: "PDL Level 2-4" },
         // Spec Pump
         "2P1": { title: "Pump History", spec: "Chemical Pump 2P1" },
-        "2P3": { title: "Pump History", spec: "Spec: 0.18kW/ Model:D13-08-300-PP/(RPM:2880rpm.)" },
+        "2P3": {
+          title: "Pump History",
+          spec: "Spec: 0.18kW/ Model:D13-08-300-PP/(RPM:2880rpm.)",
+        },
         "2P6": { title: "Pump History", spec: "Chemical Pump 2P6" },
         "2P7": { title: "Pump History", spec: "Chemical Pump 2P7" },
         "2HL1": { title: "Level ", spec: "" },
@@ -1165,7 +1166,7 @@
           "Full History : " + currentPart;
 
         const logs = JSON.parse(
-          localStorage.getItem("log_" + currentPart) || "[]"
+          localStorage.getItem("log_" + currentPart) || "[]",
         );
 
         const box = document.getElementById("fullHistoryList");

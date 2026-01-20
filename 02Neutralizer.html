@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,8 +9,8 @@
     <link rel="icon" href="boy1.png" />
     <link rel="shortcut icon" href="boy1.png" />
 
-    <title>Tank-Deflash-1</title>
-    <meta name="description" content="Tank Deflash 1 HMI Monitor" />
+     <title>MECO-02</title>
+ <meta name="description" content="MECO-02" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -153,7 +153,6 @@
         z-index: 100000;
       }
 
-     
       /* กล่องอุปกรณ์ */
       .module {
         position: relative;
@@ -860,7 +859,7 @@
         font-size: 14px;
         font-weight: bold;
       }
-       .w2 {
+      .w2 {
         width: 90px;
         height: 90px;
         font-size: 42px;
@@ -888,26 +887,25 @@
         background-color: #61ff39;
         cursor: pointer;
       }
-
     </style>
   </head>
 
   <body>
     <div class="Name">Neutralizer</div>
     <div class="top-bar">
-      <button class="w1" onclick="window.location.href='Main.html'">
+      <button class="w1" onclick="window.location.href = 'Main.html'">
         🏘️ All Machin
       </button>
-      <button class="w1" onclick="window.location.href='MECO-02.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-02.html'">
         🗽MECO-02
       </button>
-      <button class="w1" onclick="window.location.href='MECO-04.html'">
+      <button class="w1" onclick="window.location.href = 'MECO-04.html'">
         🏭MECO-04
       </button>
-      <button class="w1" onclick="window.location.href='STL-05.html'">
+      <button class="w1" onclick="window.location.href = 'STL-05.html'">
         🏗️STL-05
       </button>
-      <button class="w1" onclick="window.location.href='STL-07.html'">
+      <button class="w1" onclick="window.location.href = 'STL-07.html'">
         🗼STL-07
       </button>
     </div>
@@ -929,7 +927,7 @@
     <!-- ปุ่มฝั่งซ้าย -->
     <!-- แถวควบคุม -->
     <div class="nav-left">
-      <button class="w3" onclick="window.location.href='02DWR.html'">
+      <button class="w3" onclick="window.location.href = '02DWR.html'">
         <img
           src="back-button-circular-left-arrow-symbol_icon-icons.com_74326.png"
           class="icon"
@@ -939,7 +937,7 @@
     </div>
 
     <div class="nav-right">
-      <button class="w3" onclick="window.location.href='02Dryer.html'">
+      <button class="w3" onclick="window.location.href = '02Dryer.html'">
         <img src="next6_89384.png" class="icon" w3-wrap />
         <span class="btn-text">NEXT</span>
       </button>
@@ -947,7 +945,7 @@
 
     <!-- ปุ่ม TOP แยก -->
     <div class="front-bar">
-      <button class="w2" onclick="window.location.href='MECO-02.html'">
+      <button class="w2" onclick="window.location.href = 'MECO-02.html'">
         🏠
       </button>
     </div>
@@ -969,7 +967,6 @@
                 </div>
               </div>
               <div class="btn-wrap"></div>
-             
             </div>
           </div>
 
@@ -999,8 +996,6 @@
                   Level 7-1
                 </div>
               </div>
-
-              
             </div>
 
             <div class="LFD-OUT2 btn-wrap">
@@ -1118,7 +1113,6 @@
               Heater 7H1
             </div>
           </div>
-       
         </div>
       </div>
     </div>
@@ -1139,7 +1133,10 @@
 
         <div class="recent-box">
           <b>Recent History</b>
-          <div id="recentHistory"></div>
+          <div
+            id="recentHistory"
+            style="color: #ffffff; background-color: #f84949"
+          ></div>
         </div>
 
         <hr />
@@ -1313,7 +1310,7 @@
           "Full History : " + currentPart;
 
         const logs = JSON.parse(
-          localStorage.getItem("log_" + currentPart) || "[]"
+          localStorage.getItem("log_" + currentPart) || "[]",
         );
 
         const box = document.getElementById("fullHistoryList");
