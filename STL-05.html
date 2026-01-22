@@ -668,7 +668,7 @@
           linear-gradient(145deg, var(--btn-top), var(--btn-base));
 
         color: var(--text-strong);
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         letter-spacing: 0.4px;
 
@@ -701,284 +701,209 @@
           inset 0 -4px 8px rgba(0, 0, 0, 0.6),
           0 8px 18px rgba(0, 0, 0, 0.7);
       }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+      #hmiRoot {
+        transform-origin: top center;
+      }
     </style>
   </head>
 
   <body class="dark">
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+    <div id="hmiRoot">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
 
-    <div id="myMenu" class="side-menu">
-      <a href="Main.html">🏘️All machin </a>
-      <a href="MECO-02.html">🗽MECO-02</a>
-      <a href="MECO-04.html">🏭MECO-04</a>
-      <a href="STL-05.html">🏗️STL-05</a>
-      <a href="STL-07.html">🗼STL-07</a>
-    </div>
-    <button class="w2 btn" onclick="window.location.href = 'Main.html'">
-      🏘️All Machine
-    </button>
-    <div class="title btn" style="text-align: center; font: 3em sans-serif">
-      STL-05
-    </div>
+      <div id="myMenu" class="side-menu">
+        <a href="Main.html">🏘️All machin </a>
+        <a href="MECO-02.html">🗽MECO-02</a>
+        <a href="MECO-04.html">🏭MECO-04</a>
+        <a href="STL-05.html">🏗️STL-05</a>
+        <a href="STL-07.html">🗼STL-07</a>
+      </div>
+      <button
+        class="w2 btn-pro"
+        onclick="window.location.href = 'Main.html'"
+        style="text-align: center; font: 1.5em sans-serif"
+      >
+        🏘️All Machine
+      </button>
+      <div class="title btn" style="text-align: center; font: 3em sans-serif">
+        STL-05
+      </div>
 
-    <div class="page-center">
-      <div class="layout-scale">
-        <div class="layout">
-          <button onclick="toggleTheme()" class="btn btn-pro w80">
-            LIGHT MODE
-          </button>
-
-          <!-- ===== Turn wheel ซ้าย ===== -->
-          <button class="turnwheelbig" style="left: 80px; top: 140px">
-            <img src="1.jpg" class="wheel-img" />
-            <span>Turn<br />wheel</span>
-          </button>
-
-          <!-- ===== แถวบน ===== -->
-          <div class="btn-wrap" style="left: 200px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05DRYER.html'"
-            >
-              DRYER
+      <div class="page-center">
+        <div class="layout-scale">
+          <div class="layout">
+            <button onclick="toggleTheme()" class="btn btn-pro w80">
+              LIGHT MODE
             </button>
-          </div>
-          <div class="btn-wrap" style="left: 310px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05BLOWER.html'"
-            >
-              BLOWER
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 420px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05DI_5.html'"
-            >
-              DI_5
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 530px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05DI_4.html'"
-            >
-              DI_4
-            </button>
-          </div>
 
-          <div class="btn-wrap" style="left: 640px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05CH_F.html'"
-            >
-              CH_F
+            <!-- ===== Turn wheel ซ้าย ===== -->
+            <button class="turnwheelbig" style="left: 80px; top: 140px">
+              <img src="1.jpg" class="wheel-img" />
+              <span>Turn<br />wheel</span>
             </button>
-          </div>
-          <div class="btn-wrap" style="left: 750px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05CH_E.html'"
-            >
-              CH_E
+
+            <!-- ===== แถวบน ===== -->
+            <div class="btn-wrap" style="left: 200px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05DRYER.html'"
+              >
+                DRYER
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 310px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05BLOWER.html'"
+              >
+                BLOWER
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 420px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05DI_5.html'"
+              >
+                DI_5
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 530px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05DI_4.html'"
+              >
+                DI_4
+              </button>
+            </div>
+
+            <div class="btn-wrap" style="left: 640px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05CH_F.html'"
+              >
+                CH_F
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 750px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05CH_E.html'"
+              >
+                CH_E
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 860px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05DI_3.html'"
+              >
+                DI_3
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 970px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05CH_D.html'"
+              >
+                CH_D
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 1080px; top: 80px">
+              <button
+                class="btn btn-pro gray top w100"
+                onclick="window.location.href = '05CH_C.html'"
+              >
+                CH_C
+              </button>
+            </div>
+            <!-- ===== Turn wheel ขวาบน ===== -->
+
+            <!-- ===== Cell ใต้ Plating ===== -->
+
+            <!-- ===== แถวล่าง ===== -->
+            <div class="btn-wrap" style="left: 200px; top: 400px">
+              <button
+                class="btn btn-pro gray bottom w145"
+                onclick="window.location.href = '05UN-LOAD.html'"
+              >
+                UN-LOAD
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 395px; top: 400px">
+              <button
+                class="btn btn-pro gray bottom w145"
+                onclick="window.location.href = '05IN-LOAD.html'"
+              >
+                IN-LOAD
+              </button>
+            </div>
+
+            <div class="btn-wrap" style="left: 590px; top: 400px">
+              <button
+                class="btn btn-pro gray bottom w120"
+                onclick="window.location.href = '05CH_A.html'"
+              >
+                CH_A
+              </button>
+            </div>
+
+            <div class="btn-wrap" style="left: 740px; top: 400px">
+              <button
+                class="btn btn-pro gray bottom w120"
+                onclick="window.location.href = '05DI_1.html'"
+              >
+                DI_1
+              </button>
+            </div>
+
+            <div class="btn-wrap" style="left: 890px; top: 400px">
+              <button
+                class="btn btn-pro gray bottom w120"
+                onclick="window.location.href = '05CH_B.html'"
+              >
+                CH_B
+              </button>
+            </div>
+            <div class="btn-wrap" style="left: 1040px; top: 400px">
+              <button
+                class="btn btn-pro gray bottom w120"
+                onclick="window.location.href = '07DI_2.html'"
+              >
+                DI_2
+              </button>
+            </div>
+
+            <!-- =====  deflash===== -->
+
+            <!-- แถวกลางบน -->
+
+            <!-- ===== Cell ใต้แถวกลางบน ===== -->
+
+            <!-- ===== Cell กลางล่าง ===== -->
+
+            <!-- ===== Cell แถวกลางล่าง ===== -->
+
+            <!--Turn wheel กลาง-->
+
+            <button class="turnwheelcenter" style="left: 1150px; top: 220px">
+              <img src="1.jpg" class="wheel-img" />
+              <span>Turn<br />wheel</span>
             </button>
+
+            <!-- ===== Turn wheel ขวาล่าง ===== -->
           </div>
-          <div class="btn-wrap" style="left: 860px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05DI_3.html'"
-            >
-              DI_3
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 970px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05CH_D.html'"
-            >
-              CH_D
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 1080px; top: 80px">
-            <button
-              class="btn gray top w100"
-              onclick="window.location.href = '05CH_C.html'"
-            >
-              CH_C
-            </button>
-          </div>
-          <!-- ===== Turn wheel ขวาบน ===== -->
-
-          <!-- ===== Cell ใต้ Plating ===== -->
-
-          <!-- ===== แถวล่าง ===== -->
-          <div class="btn-wrap" style="left: 200px; top: 400px">
-            <button
-              class="btn gray bottom w145"
-              onclick="window.location.href = '05UN-LOAD.html'"
-            >
-              UN-LOAD
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 395px; top: 400px">
-            <button
-              class="btn gray bottom w145"
-              onclick="window.location.href = '05IN-LOAD.html'"
-            >
-              IN-LOAD
-            </button>
-          </div>
-
-          <div class="btn-wrap" style="left: 590px; top: 400px">
-            <button
-              class="btn gray bottom w120"
-              onclick="window.location.href = '05CH_A.html'"
-            >
-              CH_A
-            </button>
-          </div>
-
-          <div class="btn-wrap" style="left: 740px; top: 400px">
-            <button
-              class="btn gray bottom w120"
-              onclick="window.location.href = '05DI_1.html'"
-            >
-              DI_1
-            </button>
-          </div>
-
-          <div class="btn-wrap" style="left: 890px; top: 400px">
-            <button
-              class="btn gray bottom w120"
-              onclick="window.location.href = '05CH_B.html'"
-            >
-              CH_B
-            </button>
-          </div>
-          <div class="btn-wrap" style="left: 1040px; top: 400px">
-            <button
-              class="btn gray bottom w120"
-              onclick="window.location.href = '07DI_2.html'"
-            >
-              DI_2
-            </button>
-          </div>
-
-          <!-- =====  deflash===== -->
-
-          <!-- แถวกลางบน -->
-
-          <!-- ===== Cell ใต้แถวกลางบน ===== -->
-
-          <!-- ===== Cell กลางล่าง ===== -->
-
-          <!-- ===== Cell แถวกลางล่าง ===== -->
-
-          <!--Turn wheel กลาง-->
-
-          <button class="turnwheelcenter" style="left: 1150px; top: 220px">
-            <img src="1.jpg" class="wheel-img" />
-            <span>Turn<br />wheel</span>
-          </button>
-
-          <!-- ===== Turn wheel ขวาล่าง ===== -->
         </div>
-      </div>
-    </div>
-
-    <div class="spec-section">
-      <button class="toggle-btn" data-target="spec1">📒 Stock Heater 👈</button>
-
-      <div id="spec1" class="spec-wrapper">
-        <table class="spec-table">
-          <tr>
-            <!-- หัวตาราง -->
-            <th>Stock Heater</th>
-            <th>Spec</th>
-            <th>Remark</th>
-          </tr>
-
-          <tr>
-            <!-- แถวข้อมูล -->
-            <td>4MEC0313</td>
-            <td>1.5 kW</td>
-            <td>044.833.99027</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0300</td>
-            <td>4.5 kW</td>
-            <td>3HXOL4.5310.5</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0115</td>
-            <td>6 kW</td>
-            <td>3HXOL6310.5-19-R18</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0062</td>
-            <td>9 kW</td>
-            <td>3HXOL9310.5-22-R18-P2-1000</td>
-          </tr>
-
-          <tr>
-            <td>4MEC0072</td>
-            <td>12 kW</td>
-            <td>3HXOL12310.5-22-R18-P2-1000</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="spec-section">
-      <button class="toggle-btn" data-target="spec2">📒 Stock Pump 👈</button>
-
-      <div id="spec2" class="spec-wrapper">
-        <table class="spec-table">
-          <tr>
-            <!-- หัวตาราง -->
-            <th>Stock Pump</th>
-            <th>Spec</th>
-            <th>RPM</th>
-            <th>Remark</th>
-          </tr>
-          <tr>
-            <td>4MEC0151</td>
-            <td>0.18 kW</td>
-            <td>2880 rpm</td>
-            <td>D13-08-300-PP</td>
-          </tr>
-          <tr>
-            <td>4MEC0168</td>
-            <td>0.37 kW</td>
-            <td>2855 rpm</td>
-            <td>D13-12-300-PP</td>
-          </tr>
-          <tr>
-            <td>4MEC0138</td>
-            <td>1.1 kW</td>
-            <td>2900 rpm</td>
-            <td>D18-23-400-PP</td>
-          </tr>
-          <tr>
-            <td>4MEC0454</td>
-            <td>13.5 kW</td>
-            <td>1,450 rpm</td>
-            <td>NP25/41-170RE</td>
-          </tr>
-          <tr>
-            <td>4MEC0754</td>
-            <td>4 kW</td>
-            <td>950 rpm</td>
-            <td>SG132M-6A (Foot/Flange-Mounted B35)</td>
-          </tr>
-        </table>
       </div>
     </div>
 
@@ -1009,6 +934,25 @@
         document.body.classList.toggle("light");
         document.body.classList.toggle("dark");
       }
+    </script>
+    <script>
+      const isPreview = new URLSearchParams(location.search).get("preview");
+
+      if (isPreview) {
+        document.body.style.pointerEvents = "none"; // preview กดไม่ได้
+      }
+    </script>
+    <script>
+      function scaleHMI() {
+        const baseWidth = 1450; // เท่ากับ layout
+        const scale = window.innerWidth / baseWidth;
+
+        document.getElementById("hmiRoot").style.transform =
+          `scale(${Math.min(scale, 1)})`;
+      }
+
+      window.addEventListener("resize", scaleHMI);
+      scaleHMI();
     </script>
   </body>
 </html>

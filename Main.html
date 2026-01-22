@@ -20,13 +20,12 @@
 
       /*กรอบ icon*/
       .w1 {
-        all: unset; /* ⭐ ล้างค่าปุ่มทุกอย่าง */
         position: relative;
 
         width: 160px;
         height: 80px;
 
-        cursor: pointer;
+        cursor: url("cursor-machine.png"), pointer;
 
         display: flex;
         align-items: center;
@@ -34,9 +33,6 @@
 
         background: transparent;
         border: none;
-        box-shadow: none;
-        appearance: none;
-        -webkit-appearance: none;
       }
 
       .w1:hover {
@@ -117,7 +113,21 @@
       body {
         margin: 0;
         min-height: 100vh;
-        background: #7b7979;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.25),
+            rgba(0, 0, 0, 0.35)
+          ),
+          linear-gradient(145deg, #ffffff, #000000); /* 🔥 สีตอน hover */
+
+        color: #ffffff;
+        transform: translateY(-2px) scale(1.03);
+
+        box-shadow:
+          inset 0 1px 3px rgba(255, 255, 255, 0.3),
+          inset 0 -4px 8px rgba(0, 0, 0, 0.6),
+          0 8px 18px rgba(0, 0, 0, 0.7);
       }
 
       .hmi-area {
@@ -802,6 +812,7 @@
         justify-content: center;
         align-items: center;
         z-index: 200000;
+        cursor: pointer;
       }
 
       .modal.show {
@@ -814,6 +825,7 @@
         padding: 16px;
         width: 360px;
         border-radius: 10px;
+        cursor: default;
       }
 
       .modal-content.large {
@@ -1042,25 +1054,9 @@
           inset -3px -3px 6px rgba(1, 1, 1, 0.35),
           0 6px 14px #00000059;
       }
-      .page-frame {
-        position: relative;
-        min-height: 100vh;
 
-        margin: 24px; /* 🔥 ขยับออกจากขอบจออีก */
-        padding: 48px; /* 🔥 ดันเนื้อหาเข้าไปลึก */
-
-        border-radius: 26px;
-
-        background: linear-gradient(145deg, #f5f5f5, #a9a9a9);
-
-        box-shadow:
-          inset 4px 4px 8px rgba(255, 255, 255, 0.9),
-          inset -6px -6px 12px rgba(0, 0, 0, 0.35),
-          0 22px 48px rgba(0, 0, 0, 0.55); /* 🔥 เงานอก หนักขึ้น */
-      }
-      
       .btn-ui {
-        border-radius:50%;
+        border-radius: 50%;
         border: 3px solid rgba(255, 255, 255, 0.3);
 
         background: linear-gradient(180deg, #e7e7e8, #3a1fd6);
@@ -1070,7 +1066,6 @@
         font-size: 20px;
         line-height: 1.2;
         text-align: center;
-
 
         display: flex;
         align-items: center;
@@ -1084,6 +1079,164 @@
           0 8px 16px rgba(0, 0, 0, 0.45);
 
         transition: all 0.2s ease;
+      }
+      .machine-bar {
+        display: flex;
+        justify-content: center; /* ⭐ กลางแนวนอน */
+        align-items: center;
+        cursor: pointer;
+
+        gap: 40px; /* ระยะห่างปุ่ม */
+        margin-top: 40px;
+      }
+      @media (max-width: 768px) {
+        .machine-bar {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      .preview-img {
+        width: 100%;
+        max-width: 420px; /* ขนาดสูงสุด */
+        max-height: 260px; /* กันรูปสูงเกิน */
+        object-fit: contain; /* ไม่บิดรูป */
+        border-radius: 12px;
+
+        display: block;
+        margin: 0 auto; /* ⭐ กลางแนวนอน */
+
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      .preview-frame {
+        width: 100%;
+        max-width: 900px;
+        height: 280px;
+
+        border-radius: 14px;
+        border: 2px solid #666;
+        background: #918f8f;
+
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+
+        pointer-events: none; /* ⭐ ทำให้เหมือนรูป กดไม่ได้ */
+        overflow: hidden;
+
+        transform-origin: top center;
+      }
+      .enter-machine-btn {
+        cursor: pointer; /* บอกชัด: กดได้ */
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+
+        background: linear-gradient(145deg, #e7e7e8, #3a1fd6);
+
+        color: #000000;
+        font-weight: bold;
+
+        line-height: 1.2;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        box-shadow:
+          inset 0 2px 4px rgba(0, 0, 0, 0.25),
+          inset 0 -3px 6px rgba(0, 0, 0, 0.35),
+          0 8px 16px rgba(0, 0, 0, 0.45);
+
+        transition: all 0.2s ease;
+      }
+
+      /* ===== ตาราง ===== */
+      .table {
+        width: 800px;
+        border: 5px solid #000;
+      }
+
+      .row {
+        display: flex; /* ใช้ Flexbox สำหรับจัดเรียงแถว */
+        width: 100%;
+      }
+
+      .row div {
+        /* เซลล์ในแถว */
+        flex: 1;
+        border: 1px solid #000;
+        padding: 6px; /* ระยะห่างภายในเซลล์ */
+        text-align: center;
+      }
+
+      .header {
+        /* หัวตาราง */
+        background: #ccc;
+        font-weight: bold;
+      }
+      .toggle-btn {
+        padding: 6px 10px;
+        cursor: pointer;
+        margin-top: 6px;
+      }
+
+      .spec-wrapper {
+        /* กล่องสเปค */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease;
+        width: 950px;
+        margin: auto;
+      }
+
+      .spec-section {
+        /* ส่วนสเปคแต่ละส่วน */
+        position: relative; /* 🔥 ตัวอ้างอิง */
+        z-index: 2000; /* 🔥 สูงกว่า layout */
+      }
+
+      .spec-wrapper.open {
+        /* เมื่อเปิดสเปค */
+        max-height: 2000px; /* ปรับความสูงเมื่อเปิด */
+        overflow-y: auto; /* เพิ่มแถบเลื่อนถ้าจำเป็น */
+      }
+      .spec-table {
+        /* ตารางสเปค */
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+
+      .spec-table th,
+      .spec-table td {
+        /* เซลล์หัวตารางและข้อมูล */
+        border: 1px solid #000;
+        padding: 6px 10px;
+        text-align: left;
+      }
+
+      .spec-table th {
+        /* หัวตาราง */
+        background: #ddd;
+      }
+      .toggle-btn {
+        padding: 6px 10px; /* ระยะห่างภายในปุ่ม */
+        cursor: pointer;
+        margin-top: 5px; /* ระยะห่างด้านบน */
+        position: relative;
+        z-index: 3000; /* 🔥 สูงกว่า layout */
+        margin-left: 20px;
+      }
+      #logList,
+      #logList div,
+      .history-row {
+        color: #111; /* สีดำ */
+      }
+
+      #logList small {
+        color: #666; /* สีเทาอ่อน */
       }
     </style>
   </head>
@@ -1104,34 +1257,333 @@
     </div>
 
     <section class="page-title">🏘️ ALL MACHINE PANEL</section>
+    <div class="machine-bar">
+      <div style="text-align: center">
+        <button class="w1 btn-ui" onclick="openPreview(0)">MECO-02</button
+        ><br />
+        <button onclick="openMachineLog('MECO-02')">📄 LOG VIEW</button>
+      </div>
 
-    <button class="w1 btn-ui" onclick="window.location.href = 'MECO-02.html'">
-      MECO-02
-    </button>
+      <div style="text-align: center">
+        <button class="w1 btn-ui" onclick="openPreview(1)">MECO-04</button
+        ><br />
+        <button onclick="openMachineLog('MECO-04')">📄 LOG VIEW</button>
+      </div>
 
-    <button class="w1 btn-ui" onclick="window.location.href = 'MECO-04.html'">
-      MECO-04
-    </button>
-    <button class="w1 btn-ui" onclick="window.location.href = 'STL-05.html'">
-      STL-05
-    </button>
-    <button class="w1 btn-ui" onclick="window.location.href = 'STL-07.html'">
-      STL-07
-    </button>
+      <div style="text-align: center">
+        <button class="w1 btn-ui" onclick="openPreview(2)">STL-05</button><br />
+        <button onclick="openMachineLog('STL-05')">📄 LOG VIEW</button>
+      </div>
 
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("myMenu");
-        if (menu.style.width === "250px") {
-          menu.style.width = "0";
-        } else {
-          menu.style.width = "250px";
-        }
-      }
-    </script>
+      <div style="text-align: center">
+        <button class="w1 btn-ui" onclick="openPreview(3)">STL-07</button><br />
+        <button onclick="openMachineLog('STL-07')">📄 LOG VIEW</button>
+      </div>
+    </div>
+
+    <div class="spec-section">
+      <button class="toggle-btn" data-target="spec1">
+        📒 Stock Heater(MECO) 👈
+      </button>
+
+      <div id="spec1" class="spec-wrapper">
+        <table class="spec-table">
+          <tr>
+            <!-- หัวตาราง -->
+            <th>Stock Heater</th>
+            <th>Spec</th>
+            <th>Remark</th>
+          </tr>
+
+          <tr>
+            <!-- แถวข้อมูล -->
+            <td>4MEC0313</td>
+            <td>1.5 kW</td>
+            <td>044.833.99027</td>
+          </tr>
+
+          <tr>
+            <td>4MEC0300</td>
+            <td>4.5 kW</td>
+            <td>3HXOL4.5310.5</td>
+          </tr>
+
+          <tr>
+            <td>4MEC0115</td>
+            <td>6 kW</td>
+            <td>3HXOL6310.5-19-R18</td>
+          </tr>
+
+          <tr>
+            <td>4MEC0062</td>
+            <td>9 kW</td>
+            <td>3HXOL9310.5-22-R18-P2-1000</td>
+          </tr>
+
+          <tr>
+            <td>4MEC0072</td>
+            <td>12 kW</td>
+            <td>3HXOL12310.5-22-R18-P2-1000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="spec-section">
+      <button class="toggle-btn" data-target="spec2">
+        📒 Stock Pump (MECO)👈
+      </button>
+
+      <div id="spec2" class="spec-wrapper">
+        <table class="spec-table">
+          <tr>
+            <!-- หัวตาราง -->
+            <th>Stock Pump</th>
+            <th>Spec</th>
+            <th>RPM</th>
+            <th>Remark</th>
+          </tr>
+          <tr>
+            <td>4MEC0151</td>
+            <td>0.18 kW</td>
+            <td>2880 rpm</td>
+            <td>D13-08-300-PP</td>
+          </tr>
+          <tr>
+            <td>4MEC0168</td>
+            <td>0.37 kW</td>
+            <td>2855 rpm</td>
+            <td>D13-12-300-PP</td>
+          </tr>
+          <tr>
+            <td>4MEC0138</td>
+            <td>1.1 kW</td>
+            <td>2900 rpm</td>
+            <td>D18-23-400-PP</td>
+          </tr>
+          <tr>
+            <td>4MEC0454</td>
+            <td>13.5 kW</td>
+            <td>1,450 rpm</td>
+            <td>NP25/41-170RE</td>
+          </tr>
+          <tr>
+            <td>4MEC0754</td>
+            <td>4 kW</td>
+            <td>950 rpm</td>
+            <td>SG132M-6A (Foot/Flange-Mounted B35)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="spec-section">
+      <button class="toggle-btn" data-target="spec3">
+        📒 Stock Pump (STL)👈
+      </button>
+
+      <div id="spec3" class="spec-wrapper">
+        <table class="spec-table">
+          <tr>
+            <!-- หัวตาราง -->
+            <th>Stock Pump</th>
+            <th>Spec</th>
+            <th>RPM</th>
+            <th>Remark</th>
+          </tr>
+          <tr>
+            <td>4STL0012</td>
+            <td>1.5 kW</td>
+            <td>2,838 rpm</td>
+            <td>D168-1.5-400PP (RPM:2,838 / 2,800)</td>
+          </tr>
+          <tr>
+            <td>4STL0013</td>
+            <td>0.75 kW</td>
+            <td>2,800 rpm</td>
+            <td>D168-0.75-400PP (RPM:2,834 / 2,800)</td>
+          </tr>
+          <tr>
+            <td>4STL0252</td>
+            <td>0.12 kW</td>
+            <td>2,850 rpm</td>
+            <td>MY5622</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
     <script>
       function toggleMenu() {
         document.getElementById("myMenu").classList.toggle("open");
+      }
+    </script>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div id="previewModal" class="modal" onclick="closePreview()">
+      <div
+        class="modal-content large"
+        onclick="event.stopPropagation()"
+        style="text-align: center"
+      >
+        <h2 id="machineTitle">MECO-02</h2>
+
+        <iframe id="machineFrame" class="preview-frame"> </iframe>
+
+        <div
+          style="margin: 20px 0; display: flex; justify-content: space-between"
+        >
+          <button class="enter-machine-btn" onclick="prevMachine()">◀</button>
+          <button class="enter-machine-btn" onclick="nextMachine()">▶</button>
+        </div>
+
+        <button
+          class="enter-machine-btn"
+          style="width: 100%; padding: 14px; font-size: 20px"
+          onclick="enterMachine()"
+        >
+          ENTER MACHINE
+        </button>
+
+        <br /><br />
+        <button onclick="closePreview()">❌ Close</button>
+      </div>
+    </div>
+    <script>
+      const machines = [
+        {
+          name: "MECO-02",
+          page: "MECO-02.html",
+        },
+        {
+          name: "MECO-04",
+          page: "MECO-04.html",
+        },
+        {
+          name: "STL-05",
+          page: "STL-05.html",
+        },
+        {
+          name: "STL-07",
+          page: "STL-07.html",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      function openPreview(index) {
+        currentIndex = index;
+        updatePreview();
+        document.getElementById("previewModal").classList.add("show");
+      }
+
+      function closePreview() {
+        const modal = document.getElementById("previewModal");
+        const frame = document.getElementById("machineFrame");
+
+        modal.classList.remove("show");
+        frame.src = ""; // กันโหลดค้าง
+      }
+
+      function updatePreview() {
+        document.getElementById("machineTitle").innerText =
+          machines[currentIndex].name;
+
+        document.getElementById("machineFrame").src =
+          machines[currentIndex].page + "?preview=1"; // ⭐ ตรงนี้คือโหมด
+      }
+
+      function nextMachine() {
+        currentIndex = (currentIndex + 1) % machines.length;
+        updatePreview();
+      }
+
+      function prevMachine() {
+        currentIndex = (currentIndex - 1 + machines.length) % machines.length;
+        updatePreview();
+      }
+
+      function enterMachine() {
+        window.location.href = machines[currentIndex].page;
+      }
+      document.getElementById("machineFrame").src =
+        machines[currentIndex].page + "?preview=1";
+    </script>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closePreview();
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "/") {
+          e.preventDefault();
+          document.getElementById("searchBox").focus();
+        }
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".toggle-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.getElementById(btn.dataset.target).classList.toggle("open");
+        });
+      });
+    </script>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("myMenu").classList.toggle("open");
+      }
+    </script>
+    <div id="logModal" class="modal" onclick="closeLogModal()">
+      <div class="modal-content large" onclick="event.stopPropagation()">
+        <h2 id="logTitle">Machine Log</h2>
+        <div id="logList"></div>
+
+        <br />
+        <button onclick="closeLogModal()">❌ Close</button>
+      </div>
+    </div>
+    <script>
+      function openMachineLog(pageId) {
+        const list = document.getElementById("logList");
+        const title = document.getElementById("logTitle");
+
+        title.innerText = "📄 LOG : " + pageId;
+        list.innerHTML = "";
+
+        let found = false;
+
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+
+          if (!key.startsWith("log_" + pageId + "_")) continue;
+
+          const device = key.replace("log_" + pageId + "_", "");
+          const logs = JSON.parse(localStorage.getItem(key) || "[]");
+
+          logs.forEach((l) => {
+            found = true;
+            list.innerHTML += `
+        <div class="history-row">
+          <b>${device}</b><br>
+          <small>${l.time}</small><br>
+          ${l.name || "-"}<br>
+          ${l.note || "-"}
+        </div>
+      `;
+          });
+        }
+
+        if (!found) {
+          list.innerHTML = "<div>❌ ไม่มี log</div>";
+        }
+
+        document.getElementById("logModal").classList.add("show");
+      }
+
+      function closeLogModal() {
+        document.getElementById("logModal").classList.remove("show");
       }
     </script>
   </body>
